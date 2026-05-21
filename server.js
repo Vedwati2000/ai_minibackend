@@ -22,6 +22,10 @@ mongoose.connect(process.env.MONGO_URL)
     console.log(err)
 })
 
+app.get("/", (req, res) => {
+    res.send("Server is running successfully! ")
+})
+
 app.post("/ask-gemini", async (req, res) => {
 
     try {
